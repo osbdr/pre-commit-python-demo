@@ -1,8 +1,14 @@
 # Pre-Commit Demo for Python Source code
 
-The file can be used as "gist" or to demonstrate the use of pre-commit hooks within development, prio to the github/gitlap pipelines application.
+Within a good pipeline environment you check your code before the pipelines run, for that reason tools like pre-commit exist. Git introduced the concept of hooks exactly for this reason. You will find similar tools and documentation here:
 
-The gist is used by https://pre-commit.com/, and the installation instructions are:
+* https://githooks.com/
+* https://git-scm.com/book/uz/v2/Customizing-Git-Git-Hooks
+* https://pre-commit.com/#intro
+
+This Repository can be used as "gist" for pre-commit, and for the demonstration of the  use of pre-commit hooks within development, meaning on the developers maschine, prio to a commit to github or gitlap, which triggers the related pipelines, which might be similar or have a different objective.
+
+This gist is used by https://pre-commit.com/, and the installation instructions are (borrowed, but slightly adjusted from there):
 
 # Installation
 
@@ -12,14 +18,13 @@ Using pip:
 
      $ pip install pre-commit
 
-Non-administrative installation:
+### Non-administrative installation:
 
-    to upgrade: run again, to uninstall: pass uninstall to python
-    does not work on platforms without symlink support (windows)
+To upgrade: run again, to uninstall: pass uninstall to python does not work on platforms without symlink support (windows)
 
     $ curl https://pre-commit.com/install-local.py | python -
 
-In a python project, add the following to your requirements.txt (or requirements-dev.txt):
+In a python project, add "pre-commit" to your requirements.txt (or requirements-dev.txt); it enables as within the command-line
 
     $ pre-commit
 
